@@ -113,7 +113,7 @@ library Buffer {
         }
         return _b;
     }
-    /**
+    /*
       * @dev Appends a byte array to the end of the buffer. Resizes if doing so
       *      would exceed the capacity of the buffer.
       * @param _buf The buffer to append to.
@@ -150,7 +150,7 @@ library Buffer {
         }
         return _buf;
     }
-    /**
+    /*
       *
       * @dev Appends a byte to the end of the buffer. Resizes if doing so would
       * exceed the capacity of the buffer.
@@ -171,7 +171,7 @@ library Buffer {
             mstore(bufptr, add(buflen, 1)) // Update buffer length
         }
     }
-    /**
+    /*
       *
       * @dev Appends a byte to the end of the buffer. Resizes if doing so would
       * exceed the capacity of the buffer.
@@ -1091,7 +1091,7 @@ contract usingOraclize {
              Check the relaxed random contract at https://github.com/oraclize/ethereum-examples
              for an idea on how to override and replace commit hash variables.
             */
-            mstore(add(unonce, 0x20), xor(blockhash(sub(number, 1)), xor(coinbase, timestamp)))
+            mstore(add(unonce, 0x20), xor(blockhash(sub(number(), 1)), xor(coinbase(), timestamp())))
             mstore(sessionKeyHash, 0x20)
             mstore(add(sessionKeyHash, 0x20), sessionKeyHash_bytes32)
         }
@@ -1327,7 +1327,7 @@ contract usingOraclize {
     function safeMemoryCleaner() internal pure {
         assembly {
             let fmem := mload(0x40)
-            codecopy(fmem, codesize, sub(msize, fmem))
+            codecopy(fmem, codesize(), sub(msize(), fmem))
         }
     }
 }
