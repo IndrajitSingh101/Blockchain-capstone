@@ -136,7 +136,7 @@ After listing, the marketplace should look like this:
 
 ![OpenSea Rinkeby marketplace](images/opensea.png)
 
-Check out the Abode Token assets on OpenSea: [https://rinkeby.opensea.io/storefront/unidentified-contract-v825] (Abode Token)
+Check out the Abode Token assets on OpenSea: [https://rinkeby.opensea.io/collection/unidentified-contract-v825] (Abode Token)
 
 
 ## Project Resources
