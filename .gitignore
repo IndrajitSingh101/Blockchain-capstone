@@ -1,4 +1,4 @@
 node_modules
-./eth-contracts/.infura-key
-./eth-contracts/.mnemonic
-./eth-contracts/build
+eth-contracts/.infura-key
+eth-contracts/.mnemonic
+eth-contracts/build
